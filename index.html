@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>sea.js最佳实践</title>
+		<style type="text/css">
+			#alert {
+				padding: 10px 20px;
+				background: green;
+				float: left;
+				color: #fff;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" src="js/seajs/2.0.0/sea-debug.js?t=123" data-config="sea-js-config.js?t=123"></script>
+	</head>
+	<body>
+		<div id="alert">点击我</div>
+	</body>
+
+	<script type="text/javascript">
+		seajs.use('modules/app', function(app) {
+			app.script_load('index');
+		});
+	</script>
+</html>
