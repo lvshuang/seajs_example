@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>sea.js最佳实践 -- 加载jquery插件(validator)</title>
+		<style type="text/css">
+			#form {
+				width: 400px;
+				margin: 0 auto;
+				padding: 10px 20px;
+				background: #eee;
+				float: left;
+				color: #fff;
+			}
+
+			input {
+				border: 1px solid #DDD;
+				border-radius: 3px;
+				padding: 4px 6px;
+				line-height: 14px;
+			}
+
+			input:focus {
+				border-color: blue;
+			}
+
+			.button {
+				border: 1px solid #DDD;
+				border-radius: 3px;
+				background: rgb(4, 162, 4);
+				color: #FFF;
+				padding: 4px 6px;
+				cursor: pointer;
+			}
+			.button:hover {
+				background: rgb(4, 150 ,4);
+			}
+
+			form.error input {
+				border-color: red;
+			}
+
+		</style>
+		<script type="text/javascript" src="../js/seajs/2.0.0/sea-debug.js?t=123" data-config="../js/sea-js-config.js?t=123"></script>
+	</head>
+	<body>
+		<div id="form">
+			<form class="login-form">
+				<input name="username" type="text" >
+				<input name="password" type="password">
+				<button class="button">登陆</button>
+			</form>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		seajs.use('modules/app', function(app) {
+			app.script_load('login');
+		});
+	</script>
+</html>

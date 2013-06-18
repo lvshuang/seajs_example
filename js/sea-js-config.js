@@ -8,6 +8,11 @@ seajs.config({
     'jquery': {
       src: 'libs/jquery/1.9.1/jquery.js',
       exports: 'jQuery'
+    },
+    // 配置 jquery validate
+    'jquery.validate': {
+      src: 'libs/jquery.validate/1.11.1/jquery.validate.js',
+      deps: ['jquery']//validate依赖jquery，所在在这里做了配置
     }
   }
 });
